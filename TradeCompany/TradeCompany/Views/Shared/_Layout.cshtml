@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TradeCompany</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/dark1.css">
+    <link rel="stylesheet" href="~/light1.css" id="theme-link">
+    <link rel="stylesheet" href="~/css/all.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="e-loadholder">
+            <div class="m-loader">
+                <span class="e-text">Loading</span>
+            </div>
+        </div>
+        <div id="particleCanvas-Blue"></div>
+        <div id="particleCanvas-White"></div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="header__inner">
+                    <a class="navbar-brand header__title" asp-area="" asp-controller="Home"
+                       asp-action="Index">TradeCompany</a>
+
+                    <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+                        <div class="loader">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <ul class="navbar-nav header__list">
+                                <li class="nav-item header__item">
+                                    <a class="nav-link header__link" asp-area="" asp-controller="Home"
+                                       asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item header__item">
+                                    <a class="nav-link header__link" asp-area="" asp-controller="Shop"
+                                       asp-action="Index">Shop</a>
+                                </li>
+                                <li class="nav-item header__item">
+                                    <a class="nav-link header__link" asp-area="" asp-controller="Product"
+                                       asp-action="Index">Product</a>
+                                </li>
+                                <li class="nav-item header__item">
+                                    <a class="nav-link header__link" asp-area="" asp-controller="History"
+                                       asp-action="Index">History</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main role="main" class="pb-3">
+            <div class="container">
+                <div class="main__inner">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-top footer text-muted">
+            <audio src="~/audio/Play.mp3" loop controls></audio>
+            <div class="container">
+
+                <div class="footer__inner">
+
+                    <div class="footer__info"><span class="f-55">&copy;</span> <span class="f-1">2021 - </span>TradeCompany - <span class="f-2"></span><a asp-area="" asp-controller="Home" asp-action="Privacy" class="f-3">Privacy</a></div>
+                </div>
+            </div>
+            <div class="footer__settings"><i class="fas fa-cog icon-1 " ></i><i class="fas fa-adjust icon-2 theme-btn" id="theme-btn"></i></div>
+        </footer>
+    </div>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/script.js"></script>
+    <script>
+        window.onload = function () {
+            document.querySelector('.preloader').classList.add("preloader-remove");
+        };
+        $(window).on('load', function () {
+            $('.preloader').addClass("preloader-remove");
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
