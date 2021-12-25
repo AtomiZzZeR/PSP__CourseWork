@@ -9,8 +9,8 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table" style="text-align: center;">
+    <thead style="text-align: center;">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -24,9 +24,9 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody style="text-align: center;">
 @foreach (var item in Model) {
-        <tr>
+        <tr style="text-align: center;">
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>

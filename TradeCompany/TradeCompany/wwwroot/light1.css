@@ -32,10 +32,13 @@ th {
 a {
 	color: royalblue;
   }
-  
-  input {
-	border: 1px solid #fff;
-  }
+
+input {
+	border: 2px solid royalblue;
+	font-size: 1.8rem;
+	color: royalblue;
+	background-color: #fff;
+}
 
 select {
 	border: 1px solid #222;

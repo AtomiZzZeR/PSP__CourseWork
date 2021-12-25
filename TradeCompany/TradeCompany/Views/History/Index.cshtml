@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 style="text-align: center; font-size: 3rem">History</h1>
+<h1 style="text-align: center; font-size: 3rem; margin-bottom: 4px;">History</h1>
 
 <div class="row" style="text-align: center;">
-    <div class="col-md-4">
+    <div class="col-md-4" style="text-align: center;">
         <form asp-action="DownloadExcelReport" method="get">
             <div class="form-group">
                 Choose Id history
@@ -20,11 +20,11 @@
     </div>
 </div>
 
-<p>
-    <a style="text-align: center;" asp-action="Create">Create New</a>
+<p style="text-align: center;">
+    <a style="text-align: center; margin-bottom: 4px;" asp-action="Create">Create New</a>
 </p>
 <table class="table" style="text-align: center;">
-    <thead>
+    <thead style="text-align: center;">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -43,7 +43,7 @@
     </thead>
     <tbody style="text-align: center;">
 @foreach (var item in Model) {
-        <tr>
+        <tr style="text-align: center;">
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
